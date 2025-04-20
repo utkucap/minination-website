@@ -1,88 +1,63 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MiniNation - Kendi Ülkeni Kur</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniNation Anasayfa</title>
   <style>
     body {
-      background-color: #0a0a0a;
-      color: #f4f4f4;
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
+      background: #f0f4f8;
     }
-    header {
-      background: linear-gradient(90deg, #131313, #1e1e1e);
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid crimson;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: crimson;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .feature {
-      background: #1b1b1b;
-      border-left: 5px solid crimson;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-    }
-    .feature h2 {
-      margin-top: 0;
-      color: #e33;
-    }
-    footer {
-      background: #111;
-      text-align: center;
+    nav {
+      background: #1e1e2f;
       padding: 15px;
-      color: #777;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #1e1e2f;
+    }
+    .shortcut {
+      font-size: 0.9em;
+      color: gray;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>MiniNation</h1>
-    <p>Dünyayı yönetemiyorsan, kendi dünyanı yarat.</p>
-  </header>
-  
-  <section>
-    <div class="feature">
-      <h2>🌍 Kendi Ülkeni Kur</h2>
-      <p>Demokrasi, diktatörlük, krallık ya da mafya devleti... Yönetim sistemi tamamen senin elinde.</p>
-    </div>
+  <nav>
+    <a href="index.html">🏠 Anasayfa <span class="shortcut">(1)</span></a>
+    <a href="vatandaslik.html">📝 Vatandaşlık <span class="shortcut">(2)</span></a>
+    <a href="ekonomi.html">💰 Ekonomi <span class="shortcut">(3)</span></a>
+  </nav>
 
-    <div class="feature">
-      <h2>💰 Ekonomini Yönet</h2>
-      <p>Para bas, vergileri belirle, ticaret yap. Ülkenin refahı senin stratejine bağlı.</p>
-    </div>
+  <div class="container">
+    <h1>🇲🇳 MiniNation'a Hoş Geldin!</h1>
+    <p>Burada hayalindeki ülkeyi kur, yönet ve büyüt! 👑</p>
+    <p>Kısayollar: <strong>1</strong> = Anasayfa, <strong>2</strong> = Vatandaşlık, <strong>3</strong> = Ekonomi</p>
+  </div>
 
-    <div class="feature">
-      <h2>⚔️ Ordu ve Suç Sistemi</h2>
-      <p>İstersen güçlü bir ordu kur, istersen yeraltı dünyasını yönlendir. Seçim senin.</p>
-    </div>
-
-    <div class="feature">
-      <h2>💬 Sosyal Etkileşim</h2>
-      <p>Diğer kullanıcılarla savaş, diplomasi kur, vatandaş çek. Uluslararası itibarını artır.</p>
-    </div>
-
-    <div class="feature">
-      <h2>🌐 NFT Vatandaşlık</h2>
-      <p>Dijital vatandaşlıklar, toprak hakları ve kripto destekli ülke ekonomisi sistemi.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 MiniNation. Tüm hakları saklıdır.</p>
-  </footer>
+  <script>
+    document.addEventListener('keydown', function(event) {
+      if (event.key === '1') window.location.href = 'index.html';
+      if (event.key === '2') window.location.href = 'vatandaslik.html';
+      if (event.key === '3') window.location.href = 'ekonomi.html';
+    });
+  </script>
 </body>
 </html>

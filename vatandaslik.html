@@ -2,26 +2,46 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MiniNation Vatandaşlık Başvurusu</title>
+  <meta charset="UTF-8">
+  <title>Vatandaşlık Başvurusu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      padding: 20px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #1e1e2f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; background-color: #f2f2f2; padding: 20px;">
-  <h1>🇲🇳 MiniNation Vatandaşlık Başvuru Formu</h1>
-  <form action="#" method="POST">
-    <label>Adınız Soyadınız:</label><br>
-    <input type="text" name="fullname" required><br><br>
-
-    <label>Yaşınız:</label><br>
-    <input type="number" name="age" required><br><br>
-
-    <label>Mesleğiniz:</label><br>
-    <input type="text" name="job"><br><br>
-
-    <label>Neden vatandaş olmak istiyorsunuz?</label><br>
-    <textarea name="reason" rows="4" cols="40" required></textarea><br><br>
-
-    <button type="submit">Başvuruyu Gönder</button>
+<body>
+  <h2>📝 MiniNation Vatandaşlık Başvurusu</h2>
+  <form>
+    <label>Ad Soyad:</label>
+    <input type="text" required>
+    <label>Yaş:</label>
+    <input type="number" required>
+    <label>Neden vatandaş olmak istiyorsun?</label>
+    <textarea rows="4" required></textarea>
+    <button type="submit">Başvur</button>
   </form>
 </body>
 </html>

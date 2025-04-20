@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vatandaşlar</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f0f4f8; padding: 20px; }
+    #list { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h2>👥 Vatandaş Listesi</h2>
+  <div id="list"></div>
+
+  <script>
+    const citizens = JSON.parse(localStorage.getItem("vatandaslar") || "[]");
+    const listDiv = document.getElementById("list");
+    if (citizens.length === 0) {
+      listDiv.innerHTML = "<p>Henüz vatandaş yok.</p>";
+    } else {
+      listDiv.innerHTML = "<ul>" + citizens.map(v => `<li>${v.ad} (${v.yas} yaşında)</li>`).join("") + "</ul>";
+    }
+  </script>
+</body>
+</html>
